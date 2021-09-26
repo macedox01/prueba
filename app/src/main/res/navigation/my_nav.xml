@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/inicioFragment">
+    <fragment
+        android:id="@+id/primerFragment2"
+        android:name="com.example.ejemmejicano.PrimerFragment"
+        android:label="fragment_primer"
+        tools:layout="@layout/fragment_primer" >
+        <action
+            android:id="@+id/action_primerFragment2_to_segundoFragment2"
+            app:destination="@id/segundoFragment2" />
+        <action
+            android:id="@+id/action_primerFragment2_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment2"
+        android:name="com.example.ejemmejicano.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" >
+        <action
+            android:id="@+id/action_segundoFragment2_to_primerFragment2"
+            app:destination="@id/primerFragment2" />
+        <action
+            android:id="@+id/action_segundoFragment2_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.ejemmejicano.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_primerFragment2"
+            app:destination="@id/primerFragment2" />
+        <action
+            android:id="@+id/action_inicioFragment_to_segundoFragment2"
+            app:destination="@id/segundoFragment2" />
+    </fragment>
+</navigation>
